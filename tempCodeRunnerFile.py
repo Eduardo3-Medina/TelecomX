@@ -1,0 +1,1 @@
+print(dfParquet[columnas_deseadas].iloc[0])
