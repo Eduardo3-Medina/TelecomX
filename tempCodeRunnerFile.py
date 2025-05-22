@@ -1,1 +1,1 @@
-print(dfParquet[columnas_deseadas].iloc[0])
+from scipy.stats import mode

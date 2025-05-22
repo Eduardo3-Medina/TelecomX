@@ -27,5 +27,18 @@ print(dfParquet[columnas_deseadas].iloc[0])"""
         .astype(int)
     )
 '''
+import numpy as np
+mediaMonthly = np.mean(dfParquet['Charges.Monthly'])
+mediaTotal = np.mean(dfParquet['Charges.Total'])
+medianaMonthly = np.median(dfParquet['Charges.Monthly'])
+medianaTotal = np.median(dfParquet['Charges.Total'])
+desviacionEstandarMonthly = np.std(dfParquet['Charges.Monthly'])
+desviacionEstandarTotal = np.std(dfParquet['Charges.Total'])  
+varianzaMonthly = np.var(dfParquet['Charges.Monthly'])
+varianzaTotal = np.var(dfParquet['Charges.Total'])
+rangoMonthly =np.max(dfParquet['Charges.Monthly']) - np.min(dfParquet['Charges.Monthly'])
+rangoTotal =np.max(dfParquet['Charges.Total']) - np.min(dfParquet['Charges.Total'])
 
-
+from scipy.stats import mode
+modaMonthly = mode(dfParquet['Charges.Monthly'], keepdims=True)
+modaTotal = mode(dfParquet['Charges.Total'], keepdims=True)
